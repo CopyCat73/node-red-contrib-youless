@@ -1,4 +1,5 @@
-# Node for the Youless LS120 device
+# node-red-contrib-youless
+## Node for the Youless LS120 device
 
 Enter your device ip and optional password in the node settings. Attach a trigger to the input to receive Youless data.
 The following values are reported. Each value type has its own output port (hover to see name), which sends a payload to the specified topic.

@@ -2,7 +2,7 @@
 
 Energy measurements from the Youless LS120 device
 
-Enter your device ip and optional password in the node settings. Attach a node to the measurements output. Each value type ins sent in a separate message with value payload and topics as described below.
+Enter your device ip and optional password in the node settings. Attach a node to the measurements output. Each value type is sent in a separate message with value payload and topics as described below.
 
 The following values are reported (based on LS120 device):
 

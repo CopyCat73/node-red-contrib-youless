@@ -2,10 +2,9 @@
 
 Energy measurements from the Youless LS120 device
 
-Enter your device ip and optional password in the node settings. Attach a trigger to the input to receive Youless data.
-The following values are reported. Each value type has its own output port (hover to see name), which sends a payload to the specified topic.
+Enter your device ip and optional password in the node settings. Attach a node to the measurements output. Each value type ins sent in a separate message with value payload and topics as described below.
 
-Available values:
+The following values are reported (based on LS120 device):
 
 * cnt: counter in kWh
 * pwr: Pwer consumption in Watt

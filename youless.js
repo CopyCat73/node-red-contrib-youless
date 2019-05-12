@@ -33,18 +33,13 @@ module.exports = function(RED) {
                         method: 'GET',
                         json:true
                     }, function (error, response, body) {
-
                         if (!error && response.statusCode === 200) {
-                            //console.log(body) // Print the json response
-                            var measurementTypes = [ "cnt", "pwr", "lvl", "dev", "det", "con", "sts", "cs0", "ps0", "raw" ];
-                            var response = [];
-                            measurementTypes.forEach( function(s) { 
+                            for (var key in body){
                                 msg = {};
-                                msg.payload = body[s];
-                                msg.topic = node.topic + s;
-                                response.push(msg);
-                            } );
-                            node.send(response);
+                                msg.topic = key;
+                                msg.payload = body[key];
+                                node.send(msg);
+                            }
                         }
                         else if (response) {
                             if (response.statusCode === 403) {
